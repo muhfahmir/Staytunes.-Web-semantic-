@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar-app {
+    font-size: 1rem;
+    line-height: 24px;
+    background-color: black;
+}
+
+.navbar-app .navbar {
+    height: 80px;
+} 
+
+.brand-text-icon {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    border-bottom: 2px solid white;
+    text-shadow: 2px 2px 10px #1ed760;
+}
+
+.brand-text-icon:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-app .navbar .navbar-nav a.nav-link {
+    margin-right: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar-app .navbar .navbar-nav a.nav-link:hover {
+    color: #1ed760;
+}
+
+
+.banner-app {
+    padding-top: 100px;
+    background-color: #CB1582;
+    color: #A5FFEF;
+}
+
+.banner-app .banner__container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.banner-app .banner__container .banner__left {}
+
+.banner-app .banner__container .banner__left .visible-xs-block,
+.banner-app .banner__container .banner__left .visible-sm-block {
+    display: none !important;
+}
+
+.banner-app .banner__container .banner__left .banner__leftBackground {
+    /* background-size: ; */
+    background-image: url(../img/headset.png), linear-gradient(359.37deg, #000 3.09%, #FF4632 22.4%, #FAE62D 46.64%, #9BF0E1 62.15%, #A0C3D2 79.91%, #4100F5 99.49%);
+    background-repeat: no-repeat;
+    background-position: center, 0 0px;
+    background-size: contain, 100% 324px;
+    height: 300px;
+}
+
+.banner-app .banner__container .banner__left .banner__leftBackground .banner__leftContent h1.banner__leftContentHeader {
+    /* background-image: url(img/headset.png); */
+    height: 400px;
+    display: none;
+}
+
+.banner-app .banner__container .banner__right {
+    margin-left: 50px;
+}
+
+.banner-app .banner__container .banner__right h2 {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+.banner-app .banner__container .banner__right h4 {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.banner-app .banner__container .banner__right h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.banner-app .banner__container .banner__right .banner__button {
+    background-color: #A5FFEF;
+    color: #CB1582;
+    border-radius: 40px;
+    transform: scale(1);
+    transition: .3s;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700 !important;
+    min-width: 160px;
+    padding: 10px;
+    width: 60%;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+}
+
+.banner-app .banner__container .banner__right .banner__button:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.hero-app {
+    padding: 50px 0 100px;
+    background-color: #2D46B9;
+    color: #1ed760;
+}
+
+.hero-app .hero__container {
+    background-image: url(../img/hello.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.hero-app .hero__container .hero__info {
+    max-width: 500px;
+}
+
+.hero-app .hero__container .hero__info h2 {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.hero-app .hero__container .hero__info h4 {
+    font-weight: 700;
+    line-height: 64px;
+    font-size: 48px;
+}
+
+.hero-app .hero__container .hero__info h6 {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.hero-app .hero__container .hero__info a {
+    text-decoration: none;
+}
+
+.hero-app .hero__container .hero__info .hero__infoButton {
+    text-transform: uppercase;
+    background-color: #1ed760;
+    color: #2D46B9;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    width: 55%;
+    font-weight: 700;
+    font-size: 20px;
+    transform: scale(1);
+    transition: .3s;
+    display: block;
+}
+
+.hero-app .hero__container .hero__info .hero__infoButton:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.search-app {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #CB1582;
+    color: #A5FFEF;
+    /*display: none;*/
+}
+.search-app p{
+    font-weight: 500;
+}
+
+.search-app .search__input {
+    color: #CB1582;
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+}
+
+.search-app .search__button {
+    color: #CB1582;
+    background-color: #A5FFEF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.search-app .search__containerTable table.search__tableData {
+    color: #152c5b !important;
+    background: lightgrey;
+}
+
+.search-app .search__input::-webkit-input-placeholder {
+    color: #CB1582;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+}
+
+.search-app .search__input::-moz-input-placeholder {
+    color: #CB1582;
+}
+
+.search-app .search__input::-ms-input-placeholder {
+    color: #CB1582;
+}
+
+.footer-app {
+    background-color: black;
+    padding: 80px 0 30px;
+}
+
+.footer-app .footer__brandText {
+    padding-bottom: 20px;
+}
+
+.footer-app .footer__headerText {
+    text-transform: uppercase;
+    color: #919496;
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+.footer-app .footer__link ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-app .footer__link ul li {
+    margin-top: 8px;
+}
+
+.footer-app .footer__link ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-app .footer__link ul li a:hover {
+    color: #1ed760;
+}
+
+
+.footer-app .footer__icons ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+}
+
+
+.footer-app .footer__icons ul li {
+    display: flex;
+    margin-right: 10px;
+    width: 54px;
+    height: 54px;
+    background-color: #222326;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-app .footer__icons ul li a {
+    text-decoration: none;
+    color: white;
+    /* font-size: 30px; */
+}
+
+.footer-app .footer__container .row.copyright {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:1024px) {
+    .banner-app .banner__container .banner__right h4 {
+        font-size: 40px !important;
+    }
+}
+
+@media(min-width:768px) {
+    .footer-app .footer__brandText {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-app .footer__icons ul {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media(max-width:1023px) {
+
+    .footer-app .footer__icons {
+        width: 100%;
+    }
+
+    .footer-app .footer__icons ul {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media(min-width:1025px) {
+    .footer-app .footer__icons {
+        padding-left: 7rem;
+    }
+
+    .footer-app .footer__brandText {
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+@media(max-width:768px) {
+    .banner-app .banner__container .banner__right {
+        margin-left: 0 !important;
+    }
+
+    .banner-app .banner__container .banner__right .banner__button {
+        margin: auto;
+        width: max-content;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .banner-app .banner__container .banner__right h4 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .banner-app .banner__container .banner__right h3 {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .banner-app .banner__container .banner__right h4,
+    .banner-app .banner__container .banner__right h2,
+    .banner-app .banner__container .banner__right h3 {
+        text-align: center;
+    }
+}
+
+@media(max-width:767px) {
+
+    .hero-app .hero__container .hero__info h4 {
+        font-size: 32px;
+    }
+
+    .hero-app .hero__container .hero__info h6 {
+        font-size: 14px;
+        max-width: 350px;
+    }
+}
+
+@media(max-width:576px) {
+    .search-app h3.search__headerTable {
+        font-size: 20px;
+    }
+
+    .hero-app .hero__container {
+        background-size: 150px 150px;
+    }
+
+    .hero-app .hero__container .hero__info .hero__infoButton {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .hero-app .hero__container .hero__info {
+        max-width: 280px !important;
+    }
+
+    .hero-app .hero__container .hero__info h4 {
+        font-size: 28px !important;
+        line-height: 37px;
+    }
+
+    .hero-app .hero__container .hero__info h6 {
+        font-size: 14px !important;
+        line-height: 20px;
+    }
+}
+
+
+@media(max-width:380px) {
+    .footer-app .footer__brandText .brand-text-icon {
+        font-size: 20px;
+    }
+
+    .hero-app .hero__container .hero__info .hero__infoButton {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-app .hero__container {
+        background-image: none;
+    }
+
+    .hero-app .hero__container .hero__info {
+        max-width: 100% !important;
+    }
+
+    .hero-app .hero__container .hero__info h2 {
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .hero-app .hero__container .hero__info h4 {
+        line-height: 30px !important;
+        font-size: 26px !important;
+        text-align: center;
+    }
+
+    .hero-app .hero__container .hero__info h6 {
+        line-height: 20px !important;
+        font-size: 10px !important;
+        text-align: center;
+    }
+
+}
+
+@media(max-width:321px) {
+    .banner-app .banner__container .banner__right h4 {
+        font-size: 25px !important;
+    }
+}
+
+@media(max-width:280px) {
+
+    .search-app h3.search__headerTable {
+        font-size: 18px;
+    }
+
+    .banner-app .banner__container .banner__right h4 {
+        font-size: 22px !important;
+    }
+}
+
+.w3-animate-right {
+    animation-duration: 1s;
+}
+
+.w3-animate-left {
+    animation-duration: 1s;
+}
+
+/* TAMBAHAN */
+/* input[type="text"]:focus {
+    outline: none;
+}
+
+button.sidebar__iconButton:focus,
+button.chat__footerButton:focus {
+    border: none;
+    outline: none;
+} */
+
+::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 100%, .1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+}

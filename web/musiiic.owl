@@ -1,0 +1,1303 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fahmi="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#"
+     xmlns:musiiic="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl">
+        <CREATOR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muhamad Fahmi Rahmatullah
+123180108</CREATOR>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?judul ?penyanyi ?genre_music ?durasi
+	WHERE { 
+	?music_title :music_titles ?judul.
+	?music_title :singer_name ?penyanyi.
+	?music_title :time ?durasi.
+	?music_title :genre_name ?genre_music.
+	FILTER(regex(str(?genre_music), &quot;pop&quot;))
+	FILTER(regex(str(?penyanyi), &quot;justin timberlake&quot;))
+	FILTER(?durasi &lt;= 8)
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?judul ?penyanyi ?genre_music ?waktu
+	WHERE { 
+	?music_title :music_titles ?judul.
+	?music_title :singer_name ?penyanyi.
+	?music_title :time ?waktu.
+	?music_title :genre_name ?genre_music.
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer
+	WHERE { ?music_title :sung_by ?singer.
+	FILTER(regex(str(?singer), &quot;selena_gomez&quot;))
+ }</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer
+	WHERE { ?music_title :sung_by ?singer.
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre ?duration
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+	?music_title :has_duration ?duration.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+	FILTER(regex(str(?duration), &quot;more_than_5_minutes&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre ?duration
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :has_genre ?genre.
+	?music_title :has_duration ?duration.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre ?duration ?time
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :time ?time.
+	?music_title :has_duration ?duration.
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(?time &lt;= 8)
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+	FILTER(regex(str(?duration), &quot;less_than_5_minutes&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre ?duration ?time
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :time ?time.
+	?music_title :has_duration ?duration.
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(?time &lt;= 8)
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?genre ?time
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :time ?time.	
+	?music_title :has_genre ?genre.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(?time &lt;= 8)
+	FILTER(regex(str(?genre), &quot;pop&quot;))
+}</SPARQL>
+        <SPARQL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREFIX : &lt;http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?music_title ?singer ?time
+	WHERE { ?music_title :sung_by ?singer.
+	?music_title :time ?time.
+	FILTER(regex(str(?singer), &quot;justin_timberlake&quot;))
+	FILTER(?time &gt;= 8)
+ }</SPARQL>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#CREATOR -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#CREATOR"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#SPARQL -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#SPARQL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#has_duration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#has_duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#has_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#has_genre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sung_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sung_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_titles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_titles">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#band">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#boy_band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#boy_band">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#girl_band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#girl_band">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#group">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#long -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#long">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#short -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#short">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#singer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#a_year_without_rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#a_year_without_rain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#selena_gomez"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a year without rain</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selena gomez</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.54</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#adaptasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#adaptasi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tulus</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.08</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#adu_rayu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#adu_rayu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adu rayu</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tulus</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.27</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#afgansyah_reza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#afgansyah_reza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bangtan_boys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bangtan_boys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#boy_band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#banyu_moto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#banyu_moto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dangdut"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#nella_kharisma"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dangdut</genre_name>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nella kharisma</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.2</time>
+        <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banyu moto</owl:topDataProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#beyonce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#beyonce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blackpicnk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blackpicnk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#girl_band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blue_eyed_soul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blue_eyed_soul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blues -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blues">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bukti_janjimu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bukti_janjimu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dangdut"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#nella_kharisma"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dangdut</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bukti janjimu</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nella kharisma</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.25</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#cherrybelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#cherrybelle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#girl_band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#coboy_junior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#coboy_junior">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#boy_band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dan... -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dan...">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rock"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sheila_on_7"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rock</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dan...</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sheila on 7</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.44</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dangdut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dangdut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ddu-du_ddu-du -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ddu-du_ddu-du">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#k-pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blackpicnk"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k-pop</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ddu-du ddu-du</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blackpink</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.36</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#diam_diam_suka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#diam_diam_suka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#cherrybelle"/>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cherrybelle</music_titles>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diam diam suka</music_titles>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</music_titles>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.38</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dilema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dilema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#cherrybelle"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dilema</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cherrybelle</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.27</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dress_on -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dress_on">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dress on</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.39</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#drunk_in_love -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#drunk_in_love">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#beyonce"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnb</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drunk in love</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beyonce</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.3</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dynamite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#dynamite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bangtan_boys"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnb</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dynamite</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangtan boys</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.44</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ed_sheeran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ed_sheeran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#falling_down -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#falling_down">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#selena_gomez"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">falling down</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selena gomez</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.04</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#funk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#funk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#gospel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#gospel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#hip_hop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#hip_hop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#holy_grail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#holy_grail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#hip_hop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rap"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hip hop</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rap</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">holy grail</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.38</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#i_will_fly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#i_will_fly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ten2five"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i will fily</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ten2five</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.47</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#irreplaceable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#irreplaceable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#beyonce"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnb</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">irreplaceable</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beyonce</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.47</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#jazz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#jazz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#jodoh_pasti_bertemu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#jodoh_pasti_bertemu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#afgansyah_reza"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jodoh pasti bertemu</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">afgansyah reza</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.06</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#k-pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#k-pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kamu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kamu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#coboy_junior"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kamu</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coboy junior</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.57</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kenapa_mengapa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kenapa_mengapa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#coboy_junior"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kenapa mengapa</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coboy junior</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.03</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kill_this_love -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#kill_this_love">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#k-pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blackpicnk"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k-pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kill this love</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blackpink</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.14</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#langit_abu_abu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#langit_abu_abu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">langit abu abu</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tulus</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.49</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#short"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#looks_what_you_made_me_do -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#looks_what_you_made_me_do">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rock"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#taylor_swift"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rock</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">looks what you made me do</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taylor swift</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.31</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#love_story -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#love_story">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#taylor_swift"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">love story</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taylor swift</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.56</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mantan_terindah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mantan_terindah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#raisa_andriana"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mantan terindah</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raisa andriana</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.26</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mercy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mercy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shawn_mendes"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mercy</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shawn mendes</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.28</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mirrors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#mirrors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mirrors</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.04</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#monokrom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#monokrom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monokrom</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tulus</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.34</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#long"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#nella_kharisma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#nella_kharisma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#not_a_bad_thing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#not_a_bad_thing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not a bad thing</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.28</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#panah_asmara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#panah_asmara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#afgansyah_reza"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">panah asmara</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">afgansyah reza</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.36</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#raisa_andriana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#raisa_andriana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#reggae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#reggae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#seberapa_pantas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#seberapa_pantas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sheila_on_7"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seberapa pantas</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sheila on 7</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.37</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#selena_gomez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#selena_gomez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#senorita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#senorita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shawn_mendes"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">senorita</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shawn mendes</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.01</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shaggydog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shaggydog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shape_of_you -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shape_of_you">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blue_eyed_soul"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ed_sheeran"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue eyed soul</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shape of you</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ed sheeran</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.53</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shawn_mendes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#shawn_mendes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sheila_on_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#sheila_on_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#stay_gold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#stay_gold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#bangtan_boys"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stay gold</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangtan boys</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.03</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#take_back_the_night -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#take_back_the_night">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#rnb"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rnb</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">take back the night</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.53</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#taylor_swift -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#taylor_swift">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ten2five -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ten2five">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#band"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#terhebat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#terhebat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#coboy_junior"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terhebat</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coboy junior</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.14</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#thinking_out_loud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#thinking_out_loud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#blue_eyed_soul"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ed_sheeran"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue eyed soul</genre_name>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thinking out loud</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ed sheeran</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.41</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#true_colors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#true_colors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true colors</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.03</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tukar_jiwa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tukar_jiwa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tukar jiwa</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tulus</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.49</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#tulus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#solo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#usai_di_sini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#usai_di_sini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#raisa_andriana"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usai di sini</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raisa andriana</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.47</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#you -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#you">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#less_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#ten2five"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ten2five</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.33</time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#suit_&amp;_tie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#suit_&amp;_tie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#music_title"/>
+        <has_duration rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#more_than_5_minutes"/>
+        <has_genre rdf:resource="http://www.semanticweb.org/asus/ontologies/2020/10/fahmi.owl#pop"/>
+        <sung_by rdf:resource="http://www.semanticweb.org/asus/ontologies/2021/0/musiiic.owl#justin_timberlake"/>
+        <genre_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_name>
+        <music_titles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suit &amp; tie</music_titles>
+        <singer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justin timberlake</singer_name>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.26</time>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
